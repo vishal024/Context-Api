@@ -1,5 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import ComponentE from './ComponentE';
+import ClickCounter from './ClickCounter';
+import HoverCounter from './HoverCounter';
 import Title from './Title';
 import './style.css';
 
@@ -10,10 +12,10 @@ export default function App() {
   const [minus, setMinus] = useState(100);
 
   const multiplication = useMemo(
-    ( function multiply ()  {
+    function multiply() {
       console.log('multiply is called');
       return add * 10;
-    }),
+    },
     [add]
   );
   return (
@@ -34,8 +36,11 @@ export default function App() {
       <span>{minus}</span>
 
       <div>
-           <Title title={"Usecallback Demo"}/>
+        <Title title={'Usecallback Demo'} />
       </div>
+
+      <ClickCounter name={"vishal"}/>
+      <HoverCounter name={"ramesh"}/>
     </div>
   );
 }
