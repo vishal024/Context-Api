@@ -3,6 +3,8 @@ import ComponentE from './ComponentE';
 import ClickCounter from './ClickCounter';
 import HoverCounter from './HoverCounter';
 import Title from './Title';
+import Folder from './Folder';
+import explorer from './data';
 import './style.css';
 
 export const UserContext = React.createContext();
@@ -39,8 +41,10 @@ export default function App() {
         <Title title={'Usecallback Demo'} />
       </div>
 
-      <ClickCounter name={"vishal"}/>
-      <HoverCounter name={"ramesh"}/>
+      <ClickCounter name={'vishal'} />
+      <HoverCounter name={'ramesh'} />
+
+      <Folder explorer={explorer} />
     </div>
   );
 }
