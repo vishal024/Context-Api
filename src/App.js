@@ -5,7 +5,9 @@ import HoverCounter from './HoverCounter';
 import Title from './Title';
 import Folder from './Folder';
 import explorer from './data';
+import Debounce from "./Debounce"
 import './style.css';
+
 
 export const UserContext = React.createContext();
 export const channelContext = React.createContext();
@@ -32,7 +34,7 @@ export default function App() {
       <button onClick={() => setAdd(add + 1)}>Addition</button>
       <span>{add}</span>
       <br />
-      <span>mulitple to add by 10: {multiplication}</span>
+      <span>mulitply to add by 10: {multiplication}</span>
       <br />
       <button onClick={() => setMinus(minus - 1)}>subtraction</button>
       <span>{minus}</span>
@@ -45,6 +47,10 @@ export default function App() {
       <HoverCounter name={'ramesh'} />
 
       <Folder explorer={explorer} />
+
+
+
+      <Debounce/>
     </div>
   );
 }
